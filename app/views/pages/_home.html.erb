@@ -1,7 +1,7 @@
 <% unless user_signed_in? %>
 	<div class="center hero-unit">
     	<h1>Welcome to <%= link_to "Venkster's", "http://twitter.com/venksta" %> Board! </h1>
-    <p>This is the magically awesome page of <%= link_to 'Venksta',  "http://instagram.com/venkster" %> </p>
-    <p> <%= link_to "Start Nailing Pins on your Board!",  new_user_registration_path, class: "btn btn-large btn-primary btn large" %> </p>
+    <p>This is the magically awesome pin board of <%= link_to 'Venksta',  "http://instagram.com/venkster" %> </p>
+    <p> <%= link_to "Start Nailing Pins on your own Pin Board!",  new_user_registration_path, class: "btn btn-large btn-primary btn large" %> </p>
 </div>
 <% end %>
