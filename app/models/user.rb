@@ -11,5 +11,11 @@ class User < ActiveRecord::Base
 
   has_many :pins
 
+
+  has_attached_file :photo,
+                  :storage => :s3, 
+                  :s3_credentials => "#{Rails.root}/config/s3.yml",
+                  :path => "user/:attachment/:style/:id.:extension"
+
 end
 
