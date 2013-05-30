@@ -1,10 +1,10 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    50.times do |n|
-      puts "[DEBUG] creating user #{n+1} of 50"
+    60.times do |n|
+      puts "[DEBUG] creating user #{n+1} of 60"
       name = Faker::Name.name
-      email = "user-#{n+1}@example.com"
+      email = "user-#{n+1}@seelam.com"
       password = "password"
       User.create!( name: name,
                     email: email,
@@ -15,10 +15,11 @@ namespace :db do
     User.all.each do |user|
       puts "[DEBUG] uploading images for user #{user.id} of #{User.last.id}"
       5.times do |n|
-        image = File.open(Dir.glob(File.join(Rails.root, 'sampleimages', '*')).sample)
+        image = File.open(Dir.glob(File.join(Rails.root, 'Sampleimages', '*')).sample)
         description = %w(cool awesome crazy wow adorbs incredible sexy beautiful pretty super hellyeah pretty retro bomb digging).sample
         user.pins.create!(image: image, description: description)
       end
     end
   end
 end
+

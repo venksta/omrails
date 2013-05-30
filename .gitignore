@@ -24,5 +24,7 @@ doc/
 /public/system
 
 #Ignore Sample Images
-/RetroExport
+/Sampleimages
+
+
 
